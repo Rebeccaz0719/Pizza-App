@@ -1,0 +1,16 @@
+.success-container{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('../../assets/images/success.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+h1{
+    position: absolute;
+    bottom: 5%;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}

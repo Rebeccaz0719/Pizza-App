@@ -1,0 +1,14 @@
+.toppings-box{
+    width: 33.3333%;
+    text-align: center;
+}
+.toppings-img img{
+    height: 150px;
+}
+.decrese,.increse{
+    border:1px solid #f15e46;
+    padding: 5px 15px;
+}
+.num{
+    margin: 0 10px;
+}
