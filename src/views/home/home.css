@@ -96,3 +96,9 @@ th,td{
     border-right: 1px solid #e84b13;
     padding: 10px 16px;
 }
+.remove-img{
+    font-size: 24px;
+}
+.remove-img:hover{
+    color: #D30D11;
+}

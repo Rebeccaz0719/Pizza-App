@@ -147,6 +147,14 @@ export default class Home extends Component{
             popNum:num+1
         })
     }
+    //remove
+    removeItem = (index)=>{
+      const {car} = this.state
+      car.splice(index,1)
+      this.setState({
+          car
+      })
+    }
     render(){
         const {activeDetail,car,popNum} = this.state
         return(
@@ -190,18 +198,18 @@ export default class Home extends Component{
                           <table>
                           <thead>
                                        <tr>
-                                       <th>Name</th>
-                                       <th width="80%">Prop</th>
-                                       <th>Price</th>
+                                       <th width="10%">Name</th>
+                                       <th>Prop</th>
+                                       <th width="100">Price</th>
                                        </tr>
                                    </thead>
                                <tbody>
                                    {
-                                       car.map(c=>(
+                                       car.map((c,index)=>(
                                         <tr key={c.id}>
-                                            <td>{c.name}</td>
-                                            <td width="80%">{this.showName(c)}</td>
-                                            <td>${this.calcPrice(c)}</td>
+                                            <td width="10%">{c.name}</td>
+                                            <td>{this.showName(c)}</td>
+                                            <td width="100">${this.calcPrice(c)} <i onClick={()=>{this.removeItem(index)}} className="iconfont icon-remove remove-img"></i></td>
                                         </tr>
                                        ))
                                    }
